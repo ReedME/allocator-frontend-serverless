@@ -75,7 +75,7 @@ export default class ResetPassword extends Component {
   renderRequestCodeForm() {
     return (
       <Form onSubmit={this.handleSendCodeClick}>
-        <Form.Group bsSize="large" controlId="email">
+        <Form.Group bssize="large" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             autoFocus
@@ -102,7 +102,7 @@ export default class ResetPassword extends Component {
   renderConfirmationForm() {
     return (
       <Form onSubmit={this.handleConfirmClick}>
-        <Form.Group bsSize="large" controlId="code">
+        <Form.Group bssize="large" controlId="code">
           <Form.Label>Confirmation Code</Form.Label>
           <Form.Control
             autoFocus
@@ -116,7 +116,7 @@ export default class ResetPassword extends Component {
           </Form.Text>
         </Form.Group>
         <hr />
-        <Form.Group bsSize="large" controlId="password">
+        <Form.Group bssize="large" controlId="password">
           <Form.Label>New Password</Form.Label>
           <Form.Control
             type="password"
@@ -124,7 +124,7 @@ export default class ResetPassword extends Component {
             onChange={this.handleChange}
           />
         </Form.Group>
-        <Form.Group bsSize="large" controlId="confirmPassword">
+        <Form.Group bssize="large" controlId="confirmPassword">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             type="password"
