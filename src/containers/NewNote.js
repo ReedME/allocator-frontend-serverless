@@ -17,7 +17,7 @@ export default function NewNote(props) {
 
   function handleFileChange(event) {
     
-    console.log(file)
+    
     const tempfiles = Object.values(event.target.files)
     tempfiles.forEach((f,i) => {
     if (f && f.size > config.MAX_ATTACHMENT_SIZE) {
@@ -36,15 +36,15 @@ export default function NewNote(props) {
     event.preventDefault();
     setIsLoading(true);
   const tempfiles = Object.values(file.current)
-  console.log(tempfiles)
+  
   const files = tempfiles.map(async f => {
-      console.log(f)  
+       
   return await s3Upload(f)
    
 })
 
 const attachment = await Promise.all(files);
-console.log(attachment)
+
 
 if (attachment.length === tempfiles.length){
 try {
